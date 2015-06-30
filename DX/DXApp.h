@@ -1,7 +1,11 @@
+//The code is based on Matt Guerette DirectX 11 Tutorial
+//URL: https://goo.gl/EAGuQ3
+
 #pragma once
 #define WIN32_LEAN_AND_MEAN
 #include <windows.h>
 #include <string>
+#include "DXUtil.h"
 
 class DXApp
 {
@@ -27,7 +31,16 @@ protected:
     std::string m_AppTitle;
     DWORD       m_WndStyle;
 
-    bool InitWindow();
+    //DIRECTX Attributes
+    ID3D11Device*			m_pDevice;
+    ID3D11DeviceContext*	m_pImmediateContext;
+    IDXGISwapChain*			m_pSwapChain;
+    ID3D11RenderTargetView*	m_pRenderTargetView;
+    D3D_DRIVER_TYPE			m_DriverType;
+    D3D_FEATURE_LEVEL		m_FeatureLevel;
+    D3D11_VIEWPORT			m_Viewport;
 
+    bool InitWindow();
+    bool InitDirect3D();
 };
 
