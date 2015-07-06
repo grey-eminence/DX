@@ -48,6 +48,9 @@
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <FxCompile>
+      <EntryPointName>VSMain</EntryPointName>
+    </FxCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -73,6 +76,9 @@
     <ClInclude Include="DXApp.h" />
     <ClInclude Include="dxerr.h" />
     <ClInclude Include="DXUtil.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="Shaders.fx" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

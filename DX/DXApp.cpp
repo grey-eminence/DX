@@ -158,7 +158,7 @@ bool DXApp::InitDirect3D()
     swapDesc.OutputWindow = m_hAppWnd;
     swapDesc.SwapEffect = DXGI_SWAP_EFFECT_DISCARD;
     swapDesc.Windowed = true;
-    swapDesc.SampleDesc.Count = 1;
+    swapDesc.SampleDesc.Count = 4;
     swapDesc.SampleDesc.Quality = 0;
     swapDesc.Flags = DXGI_SWAP_CHAIN_FLAG_ALLOW_MODE_SWITCH;
 
